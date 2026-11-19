@@ -12,21 +12,24 @@ function arrayLimit(val) {
 const questionSchema = new mongoose.Schema({
 
     questionText: { type: String, required: true },
-    options: [{ type: String, required: true, validate: [arrayLimit, '{PATH} must have exactly 4 options']],
-    correctAnswer: { type: String, required: true, min: 0, max: 3 },
+    options: { type: [String], required: true, validate: [arrayLimit, '{PATH} must have exactly 4 options'] },
+    correctAnswer: { type: Number, required: true, min: 0, max: 3 },
 }); 
 
 const quizSchema = new mongoose.Schema({
 
     quizTitle: { type: String, required: true },
     quizDescription: { type: String, required: true },
-    questionText: { [questionSchema]: String, required: true },
+    questionText: { type: [questionSchema], required: true },
+    settings: { type: SettingsSchema, required: true },
 });
 
 
 
 const SettingsSchema = new mongoose.Schema({
-   
+    TimeLimit: { type: Number, required: true, min: 1 },
+    MaximumAttempts: { type: Number, required: true, min: 1 },
+
 
 })
 
