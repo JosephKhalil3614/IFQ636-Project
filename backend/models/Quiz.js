@@ -15,6 +15,15 @@ const questionSchema = new mongoose.Schema({
     correctAnswer: { type: Number, required: true, min: 0, max: 3 },
 }); 
 
+
+const SettingsSchema = new mongoose.Schema({
+    TimeLimit: { type: Number, required: true, min: 1 },
+    MaximumAttempts: { type: Number, required: true, min: 1 },
+
+
+})
+
+
 const quizSchema = new mongoose.Schema({
 
     quizTitle: { type: String, required: true },
@@ -26,12 +35,7 @@ const quizSchema = new mongoose.Schema({
 
 
 
-const SettingsSchema = new mongoose.Schema({
-    TimeLimit: { type: Number, required: true, min: 1 },
-    MaximumAttempts: { type: Number, required: true, min: 1 },
 
-
-})
 
 
 module.exports = mongoose.model('Quiz', quizSchema);
