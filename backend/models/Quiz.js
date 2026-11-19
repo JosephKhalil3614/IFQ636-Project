@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-
 //Checks there are exactly 4 options and that they are all non-empty strings
 function arrayLimit(val) {  
     return Array.isArray(val) &&
@@ -22,6 +21,7 @@ const quizSchema = new mongoose.Schema({
     quizDescription: { type: String, required: true },
     questionText: { type: [questionSchema], required: true },
     settings: { type: SettingsSchema, required: true },
+    createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
 });
 
 
@@ -34,3 +34,4 @@ const SettingsSchema = new mongoose.Schema({
 })
 
 
+module.exports = mongoose.model('Quiz', quizSchema);
