@@ -1,7 +1,5 @@
 
 const User = require('../models/User');
-cont Teacher = require('../models/Teacher');
-const Student = require('../models/Student');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
