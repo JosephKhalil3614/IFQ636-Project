@@ -1,19 +1,39 @@
-**Task Manager Application Overview:The task manager application is designed to help users efficiently manage their tasks and responsibilities by providing a user-friendly interface for creating, viewing, updating, and deleting tasks. It includes essential features such as secure user authentication, allowing individuals to sign up and log in to their accounts, as well as profile management to update personal information. With built-in validation such as input field validation and email validation, the application ensures a seamless user experience while enhancing productivity and organization in both personal and professional settings. **
+Quizlett.
 
-**This apps **contain** the following features:**
+An online quiz management system designed to congregate all quiz design tools into one functional application
 
-* Signup
-* Login
-* Logout
-* Update profile
-* Add tasks
-* View tasks
-* Update tasks
-* Delete tasks
-
-**This **app**lication** is**almost **a** precompiled** app**. However, students will develop some features,**such as adding tasks, viewing tasks, updating tasks, and **deleting** tasks**. **Students** will interact with GitHub when they develop the features.**
+Current features:
+- Login System
+- Backend user roles (still not functional)
+- Quiz creation tool functional
+- Quiz saving
 
 ---
+Missing features:
+- View recent quizzes
+- Student role functionality
+- Edit recent quizzes
+- Dashboard
+
+Architecture:
+- Frontend: React, JS
+- Backend: NodeJS, ExpressJS
+- Database: MongoDB
+- Web server: NGINX
+- Cloud hosting: AWS EC2
+- Version Control:Github
+
+Setup:
+
+1. Clone repository to your local computer
+2. install backend dependencies using npm install
+3. configure MongoDB connection string and JWT token
+4. start express using npm start
+5. configure API proxying to backend port 5001
+6. Start React development server using npm start
+
+The application has been deployed to the university provided sample EC2 setup.
+Deployment URL: http://3.27.18.86
 
 **Prerequisite:** Please install the following software and create account in following web tools** **
 
@@ -22,5 +42,5 @@
 * **VS code editor** [[https://code.visualstudio.com/](https://code.visualstudio.com/)]** **
 * **MongoDB Account** [[https://account.mongodb.com/account/login](https://account.mongodb.com/account/login)]** - In tutorial, we have also showed how can you create account and database: follow step number 2.**
 * **GitHub Account** [[https://github.com/signup?source=login](https://github.com/signup?source=login)]** **
-
+**NGINX** https://nginx.org/en/
 ---
